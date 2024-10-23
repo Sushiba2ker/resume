@@ -7,16 +7,16 @@ interface ObjectiveItemProps {
 
 export default function CareerObjectives() {
   return (
-    <div className="bg-[#181818] p-4 rounded-lg">
-      <h2 className="text-xl font-bold mb-4 text-gray-200">CAREER OBJECTIVES</h2>
+    <div className="bg-[#181818] p-3 rounded-lg">
+      <h2 className="text-lg font-bold mb-2 text-gray-200">OBJECTIVES</h2>
       <div className="space-y-2">
         <ObjectiveItem
-          title="Ngắn hạn"
-          description="Đảm nhận vị trí Data Engineer, trở thành chuyên gia kỹ thuật dữ liệu trong 2-3 năm, đảm nhiệm các dự án lớn và tối ưu hóa hệ thống dữ liệu."
+          title="Short-term"
+          description="Become a Data Engineering expert in 2-3 years, leading major data optimization projects."
         />
         <ObjectiveItem
-          title="Dài hạn"
-          description="Thăng tiến lên trưởng bộ phận Kỹ thuật Dữ liệu trong vòng 5 năm."
+          title="Long-term"
+          description="Advance to Data Engineering Team Lead within 5 years."
         />
       </div>
     </div>
@@ -25,12 +25,12 @@ export default function CareerObjectives() {
 
 function ObjectiveItem({ title, description }: ObjectiveItemProps) {
   return (
-    <div>
-      <div className="flex items-center gap-2">
-        <Target className="w-5 h-5 text-gray-400" />
+    <div className="text-xs">
+      <div className="flex items-center gap-1">
+        <Target className="w-3 h-3 text-gray-400" />
         <p className="text-gray-200 font-semibold">{title}</p>
       </div>
-      <p className="text-sm text-gray-300 ml-7">{description}</p>
+      <p className="text-gray-300 ml-4">{description}</p>
     </div>
   );
 }

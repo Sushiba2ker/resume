@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shuffle, SkipBack, Play, SkipForward, Repeat, Mic2, ListMusic, MonitorSpeaker, Volume2, Maximize2 } from 'lucide-react';
+import { Shuffle, SkipBack, Play, SkipForward, Repeat, Mic2, ListMusic, MonitorSpeaker, Volume2, Maximize2, Music } from 'lucide-react';
 
 export default function MusicPlayer() {
   return (
@@ -7,14 +7,12 @@ export default function MusicPlayer() {
       <div className="flex items-center justify-between max-w-screen-2xl mx-auto">
         {/* Currently Playing */}
         <div className="flex items-center min-w-[180px]">
-          <img 
-            src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?w=100&h=100&q=80" 
-            alt="Album cover"
-            className="w-14 h-14 rounded"
-          />
+          <div className="w-14 h-14 bg-[#282828] rounded flex items-center justify-center">
+            <Music className="w-8 h-8 text-[#b3b3b3]" />
+          </div>
           <div className="ml-3">
-            <h4 className="text-sm text-white font-medium">Resume.mp3</h4>
-            <p className="text-xs text-[#b3b3b3]">Brooke George</p>
+            <h4 className="text-sm text-white font-medium">Resume.pdf</h4>
+            <p className="text-xs text-[#b3b3b3]">Nguyen Quoc Bao</p>
           </div>
         </div>
 

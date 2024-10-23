@@ -3,38 +3,28 @@ import { Briefcase, Building2, Users } from 'lucide-react';
 
 export default function Experience() {
   return (
-    <div className="bg-[#181818] p-4 rounded-lg">
-      <h2 className="text-xl font-bold mb-4 text-gray-200">WORK EXPERIENCE</h2>
-      <div className="space-y-6">
+    <div className="bg-[#181818] p-3 rounded-lg">
+      <h2 className="text-lg font-bold mb-2 text-gray-200">WORK EXPERIENCE</h2>
+      <div className="space-y-3">
         <ExperienceItem
-          icon={<Briefcase className="w-5 h-5" />}
-          company="Freelance Data Engineer / Nhà phát triển Phần mềm"
+          icon={<Briefcase className="w-4 h-4" />}
+          company="Freelance Data Engineer"
           position="Freelance"
-          period="09/2021 - Hiện tại"
+          period="09/2021 - Present"
           responsibilities={[
-            "Thiết kế Data Pipeline với Python, SQL, Apache Airflow, nâng truy cập dữ liệu từ 75% lên 95% và độ tin cậy từ 85% lên 99% cho 5 khách hàng lớn.",
-            "Tối ưu kho dữ liệu trên AWS Redshift và Google BigQuery, giảm thời gian truy vấn từ 10 giây xuống 8 giây (giảm 20%), tăng hiệu suất xử lý 15%.",
-            "Hoàn thành hơn 10 dự án với tỷ lệ hài lòng 98%, triển khai Docker và Kubernetes, giảm thời gian triển khai từ 5 ngày xuống 3 ngày (giảm 40%)."
+            "Designed Data Pipeline with Python, SQL, Apache Airflow, improving data access from 75% to 95%.",
+            "Optimized AWS Redshift and BigQuery warehouses, reducing query time by 20%, processing efficiency up 15%.",
+            "Completed 10+ projects with 98% satisfaction, implemented Docker/Kubernetes, deployment time down 40%."
           ]}
         />
         <ExperienceItem
-          icon={<Building2 className="w-5 h-5" />}
-          company="Ngân hàng Đầu tư và Phát triển Việt Nam (BIDV)"
-          position="Thực tập sinh"
+          icon={<Building2 className="w-4 h-4" />}
+          company="BIDV Bank"
+          position="Intern"
           period="02/2024 - 05/2024"
           responsibilities={[
-            "Tối ưu Data Pipline với Python và Apache Spark, giảm thời gian xử lý từ 8 giây xuống 6 giây (giảm 25%).",
-            "Triển khai Hệ thống Chấm công Tự động với SQL Server, giảm thời gian quản lý từ 10 giờ xuống 6 giờ/tháng (giảm 40%)."
-          ]}
-        />
-        <ExperienceItem
-          icon={<Users className="w-5 h-5" />}
-          company="Công ty cổ phần BStar Solutions"
-          position="Fresher"
-          period="10/2021 - 09/2022"
-          responsibilities={[
-            "Đào tạo chuyên sâu về tối ưu cơ sở dữ liệu và Data Pipeline với SQL, MongoDB, đạt điểm trung bình 90/100.",
-            "Triển khai giải pháp quản lý dữ liệu trên Oracle SQL và PostgreSQL, cải thiện hiệu suất lưu trữ và truy vấn tăng 30%, giảm thời gian truy vấn từ 5 giây xuống 3.5 giây."
+            "Optimized Data Pipeline with Python and Apache Spark, reducing processing time by 25%.",
+            "Implemented Automated Attendance System with SQL Server, reducing management time by 40%."
           ]}
         />
       </div>
@@ -53,15 +43,13 @@ interface ExperienceItemProps {
 function ExperienceItem({ icon, company, position, period, responsibilities }: ExperienceItemProps) {
   return (
     <div>
-      <div className="flex items-center gap-2 mb-2">
+      <div className="flex items-center gap-2 mb-1">
         {icon}
-        <h3 className="text-lg font-semibold text-gray-200">{company}</h3>
+        <h3 className="text-sm font-semibold text-gray-200">{company}</h3>
+        <span className="text-xs text-gray-400">• {position}</span>
+        <span className="text-xs text-gray-400 ml-auto">{period}</span>
       </div>
-      <div className="flex justify-between items-center mb-2">
-        <p className="text-sm text-gray-400">{position}</p>
-        <p className="text-sm text-gray-400">{period}</p>
-      </div>
-      <ul className="list-disc list-inside text-sm text-gray-300">
+      <ul className="list-disc list-inside text-xs text-gray-300 ml-5">
         {responsibilities.map((resp, index) => (
           <li key={index}>{resp}</li>
         ))}

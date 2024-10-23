@@ -6,12 +6,10 @@ export default function Summary() {
     <div className="bg-[#181818] p-3 rounded-lg">
       <div className="flex flex-col mb-2">
         <ActionButtons />
-        <h2 className="text-lg font-bold text-gray-200 mt-2">Tóm tắt</h2>
+        <h2 className="text-lg font-bold text-gray-200 mt-2">Summary</h2>
       </div>
       <p className="text-sm text-gray-300">
-        Sinh viên năm cuối với 2 năm kinh nghiệm trong tối ưu hóa hệ thống dữ liệu và tự động hóa quy trình. Thành thạo AWS,
-        Python, và Big Data. Đã nâng cao hiệu suất truy vấn 20% cho các doanh nghiệp thông qua việc tối ưu data pipeline trên
-        AWS và Apache Spark.
+        Final year student with 2 years of experience in data system optimization and process automation. Proficient in AWS, Python, and Big Data. Improved query performance by 20% through AWS and Apache Spark data pipeline optimization.
       </p>
     </div>
   );

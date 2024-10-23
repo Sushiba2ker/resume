@@ -14,17 +14,17 @@ import Certifications from './components/Certifications';
 function App() {
   return (
     <ResumePDF>
-      <div className="min-h-screen bg-[#121212] text-[#b3b3b3] pb-24">
+      <div className="pb-16">
         <Header />
-        <div className="container mx-auto px-2 mt-2 space-y-2">
+        <div className="container mx-auto px-4 mt-4 space-y-4">
           <Summary />
-          <div className="grid grid-cols-2 gap-2">
-            <div className="space-y-2">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div className="space-y-4">
               <CareerObjectives />
               <Education />
               <Experience />
             </div>
-            <div className="space-y-2">
+            <div className="space-y-4">
               <Projects />
               <Skills />
               <Certifications />
